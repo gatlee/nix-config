@@ -44,6 +44,7 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
+  services.xserver.videoDrivers = [ "nvidia" "displaylink" "modesetting" ];
 
 
   # Enable the GNOME 3 Desktop Environment.
