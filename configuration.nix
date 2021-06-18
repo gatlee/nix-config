@@ -88,6 +88,7 @@
     droidcam
     zoom-us
     git
+    gnome3.gnome-tweaks
   ];
 
   nixpkgs.config.packageOverrides = pkgs: {
