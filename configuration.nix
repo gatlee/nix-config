@@ -87,7 +87,7 @@
     xcape
     discord
     droidcam
-    zoom
+    zoom-us
     git
   ];
 
