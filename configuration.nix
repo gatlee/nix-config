@@ -89,6 +89,7 @@
     zoom-us
     git
     gnome3.gnome-tweaks
+    gparted
   ];
 
   nixpkgs.config.packageOverrides = pkgs: {
