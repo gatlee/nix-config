@@ -90,6 +90,13 @@
     git
     gnome3.gnome-tweaks
     gparted
+    ripgrep
+    nixfmt
+    shellcheck
+    fd
+    leiningen
+    clojure
+    clj-kondo
   ];
 
   nixpkgs.config.packageOverrides = pkgs: {
