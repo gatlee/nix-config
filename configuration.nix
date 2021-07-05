@@ -7,6 +7,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./cachix.nix
     ];
 
   # Use the systemd-boot EFI boot loader.
@@ -97,14 +98,22 @@
     leiningen
     clojure
     clj-kondo
+    emacsPgtkGcc
   ];
+
+  services.emacs.package = pkgs.emacsPgtkGcc;
+  nixpkgs.overlays = [
+    (import (builtins.fetchTarball {
+      url = https://github.com/mjlbach/emacs-overlay/archive/feature/flakes.tar.gz;
+    }))
+  ];
+  services.emacs.enable = true;
 
   nixpkgs.config.packageOverrides = pkgs: {
     nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
       inherit pkgs;
     };
   };
-  
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -134,4 +143,4 @@
   system.stateVersion = "21.05"; # Did you read the comment?
 
 }
-
+  
