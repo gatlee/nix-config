@@ -16,6 +16,7 @@
   boot.loader.grub.useOSProber = true;
   boot.kernelModules = [ "v4l2loopback" ];
   boot.extraModulePackages = [ config.boot.kernelPackages.v4l2loopback ];
+  boot.supportedFilesystems = [ "ntfs"];
   # networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
