@@ -100,7 +100,25 @@
     leiningen
     clojure
     clj-kondo
+    spotify
+    unzip
+    retroarch
+    gnomeExtensions.paperwm
     emacsPgtkGcc
+    steam-run-native
+    sqlite
+    google-chrome
+    clojure-lsp
+    wally-cli
+    libusb
+  ];
+
+  nixpkgs.config.retroarch = {
+    enableMesen = true;
+  };
+
+  fonts.fonts = with pkgs; [
+    corefonts
   ];
 
   services.emacs.package = pkgs.emacsPgtkGcc;
