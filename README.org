@@ -1,0 +1,5 @@
+#+TITLE: Gatlee's NixOS configuration
+
+* Directories
+- ~nixos~ : nixos configuration
+- ~home-manager~: home-manager
