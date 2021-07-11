@@ -129,6 +129,14 @@
   ];
   services.emacs.enable = true;
 
+ networking.firewall.allowedTCPPorts = [
+    21000 # Immersed VR
+  ];
+
+  networking.firewall.allowedUDPPorts = [
+    21001 21010 # Immersed VR
+  ];
+
   nixpkgs.config.packageOverrides = pkgs: {
     nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
       inherit pkgs;
