@@ -18,6 +18,13 @@
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "21.05";
+  home = {
+    sessionVariables = {
+      EDITOR="emacsclient -t";
+      VISUAL="emacsclient -c -a emacs";
+    };
+  };
+
   programs.alacritty = {
     enable = true;
   };
