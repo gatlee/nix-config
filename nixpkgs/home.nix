@@ -18,7 +18,9 @@
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "21.05";
-  
+  programs.alacritty = {
+    enable = true;
+  };
   programs.zsh = {
     enable = true; 
     initExtra = "autoload -U promptinit; promptinit\n 
