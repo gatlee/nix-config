@@ -25,13 +25,15 @@
     enable = true; 
     initExtra = "autoload -U promptinit; promptinit\n 
                  prompt pure";
+    shellAliases = {
+      gits = "cd ~/Documents/sources";
+      ran = "ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd \"$LASTDIR\"";
+      pls = "sudo $(fc -ln -1)";
+      vim = "emacsclient -nw $1";
+    };
     oh-my-zsh = {
       enable = true;
       plugins = [ "git" "vi-mode" ];
-      shellAliases = {
-        gits = "cd ~/Documents/sources";
-        ran = "ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd \"$LASTDIR\"";
-      };
     };
     plugins = [
       {
