@@ -60,6 +60,7 @@
     enableZshIntegration = true;
   };
   home.packages = with pkgs; [
+    gnomeExtensions.paperwm
     pure-prompt
     ranger
   ];

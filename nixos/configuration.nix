@@ -103,7 +103,6 @@
     spotify
     unzip
     retroarch
-    gnomeExtensions.paperwm
     emacsPgtkGcc
     steam-run-native
     sqlite
