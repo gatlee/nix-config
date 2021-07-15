@@ -66,6 +66,7 @@
     gnomeExtensions.disable-workspace-switch-animation-for-gnome-40
     pure-prompt
     ranger
+    tldr
   ];
   home.sessionPath = [ "~/.emacs.d/bin"];
 }
