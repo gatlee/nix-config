@@ -91,6 +91,7 @@
     zoom-us
     git
     gnome3.gnome-tweaks
+    gnome.dconf-editor
     gparted
     ripgrep
     nixfmt
