@@ -73,7 +73,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.gat = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "docker"]; # Enable ‘sudo’ for the user.
     shell = pkgs.zsh;
   };
 
@@ -169,5 +169,5 @@
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "21.05"; # Did you read the comment?
 
+  virtualisation.docker.enable = true;
 }
-  
