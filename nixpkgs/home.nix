@@ -64,6 +64,11 @@
     enable = true;
     enableZshIntegration = true;
   };
+  programs.git = {
+    enable = true;
+    userEmail = "gatlee.kaw@gmail.com";
+    userName = "Gatlee Kaw";
+  };
   home.packages = with pkgs; [
     gnomeExtensions.paperwm
     gnomeExtensions.cleaner-overview
