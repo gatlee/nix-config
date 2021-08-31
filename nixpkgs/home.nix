@@ -69,6 +69,9 @@
     userEmail = "gatlee.kaw@gmail.com";
     userName = "Gatlee Kaw";
   };
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
+
   home.packages = with pkgs; [
     gnomeExtensions.paperwm
     gnomeExtensions.cleaner-overview
