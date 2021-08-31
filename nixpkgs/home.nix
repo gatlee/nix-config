@@ -28,6 +28,11 @@
   programs.alacritty = {
     enable = true;
   };
+  programs.emacs = {
+    enable = true;
+    extraPackages = epkgs: [ epkgs.vterm ];
+  };
+  services.emacs.enable = true;
   programs.zsh = {
     enable = true; 
     initExtra = "autoload -U promptinit; promptinit\n 
@@ -67,6 +72,10 @@
     pure-prompt
     ranger
     tldr
+    sqlite
+    fontconfig
+    cmake
+    libtool
   ];
   home.sessionPath = [ "~/.emacs.d/bin"];
 }
