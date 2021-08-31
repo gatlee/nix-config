@@ -86,4 +86,5 @@
     libtool
   ];
   home.sessionPath = [ "~/.emacs.d/bin"];
+  fonts.fontconfig.enable = true;
 }
