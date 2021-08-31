@@ -85,6 +85,6 @@
     cmake
     libtool
   ];
-  home.sessionPath = [ "~/.emacs.d/bin"];
+  home.sessionPath = [ "~/.emacs.d/bin" "~HOME/usr/local/bin"];
   fonts.fontconfig.enable = true;
 }
