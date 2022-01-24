@@ -85,6 +85,12 @@
     fontconfig
     cmake
     libtool
+    ripgrep
+    direnv
+    leiningen
+    clj-kondo
+    clojure
+    clojure-lsp
   ];
   home.sessionPath = [ "~/.emacs.d/bin" "~HOME/usr/local/bin"];
   fonts.fontconfig.enable = true;
