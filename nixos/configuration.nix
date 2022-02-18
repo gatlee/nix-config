@@ -140,6 +140,12 @@
     nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
       inherit pkgs;
     };
+    steam = pkgs.steam.override {
+      extraPkgs = pkgs: [
+        pkgs.gnutls
+        pkgs.glib_networking
+      ];
+    };
   };
 
   # Some programs need SUID wrappers, can be configured further or are
