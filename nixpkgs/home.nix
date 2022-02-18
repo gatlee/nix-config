@@ -28,6 +28,11 @@
   programs.alacritty = {
     enable = true;
   };
+  programs.emacs = {
+    enable = true;
+    extraPackages = epkgs: [ epkgs.vterm ];
+  };
+  services.emacs.enable = true;
   programs.zsh = {
     enable = true; 
     initExtra = "autoload -U promptinit; promptinit\n 
@@ -59,6 +64,15 @@
     enable = true;
     enableZshIntegration = true;
   };
+  programs.git = {
+    enable = true;
+    userEmail = "gatlee.kaw@gmail.com";
+    userName = "Gatlee Kaw";
+  };
+  programs.ssh.enable = true;
+  programs.direnv.enable = true;
+  programs.direnv.nix-direnv.enable = true;
+
   home.packages = with pkgs; [
     gnomeExtensions.paperwm
     gnomeExtensions.cleaner-overview
@@ -67,6 +81,17 @@
     pure-prompt
     ranger
     tldr
+    sqlite
+    fontconfig
+    cmake
+    libtool
+    ripgrep
+    direnv
+    leiningen
+    clj-kondo
+    clojure
+    clojure-lsp
   ];
-  home.sessionPath = [ "~/.emacs.d/bin"];
+  home.sessionPath = [ "~/.emacs.d/bin" "~HOME/usr/local/bin"];
+  fonts.fontconfig.enable = true;
 }
