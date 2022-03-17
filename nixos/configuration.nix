@@ -31,7 +31,7 @@
   networking.interfaces.wlp7s0.useDHCP = true;
 
   nixpkgs.config.allowUnfree = true;
-  nix.allowedUsers = [ "@wheel" ];
+  nix.settings.allowed-users = [ "@wheel" ];
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -148,7 +148,7 @@
     steam = pkgs.steam.override {
       extraPkgs = pkgs: [
         pkgs.gnutls
-        pkgs.glib_networking
+        pkgs.glib-networking
       ];
     };
   };
