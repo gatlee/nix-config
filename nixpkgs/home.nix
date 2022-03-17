@@ -75,9 +75,6 @@
 
   home.packages = with pkgs; [
     gnomeExtensions.paperwm
-    gnomeExtensions.cleaner-overview
-    gnomeExtensions.vertical-overview
-    gnomeExtensions.disable-workspace-switch-animation-for-gnome-40
     pure-prompt
     ranger
     tldr
