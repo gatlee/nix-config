@@ -63,6 +63,12 @@
 
   # Enable sound.
   sound.enable = true;
+  hardware.bluetooth.settings = {
+    General = {
+      Enable = "Source,Sink,Media,Socket";
+      ControllerMode = "bredr";
+    };
+  };
   hardware.pulseaudio.enable = true;
   hardware.opengl.enable = true;
   hardware.bluetooth.enable = true;
