@@ -121,6 +121,9 @@
     clojure-lsp
     wally-cli
     libusb
+    bitwarden
+    gcc
+    logseq
   ];
 
   nixpkgs.config.retroarch = {
