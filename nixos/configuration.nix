@@ -124,6 +124,7 @@
     bitwarden
     gcc
     logseq
+    noisetorch
   ];
 
   nixpkgs.config.retroarch = {
