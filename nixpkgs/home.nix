@@ -88,6 +88,8 @@
     clj-kondo
     clojure
     clojure-lsp
+    love
+    sumneko-lua-language-server
   ];
   home.sessionPath = [ "~/.emacs.d/bin" "~HOME/usr/local/bin"];
   fonts.fontconfig.enable = true;
