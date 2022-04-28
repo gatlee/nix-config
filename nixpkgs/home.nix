@@ -41,7 +41,6 @@
       gits = "cd ~/Documents/sources";
       ran = "ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd \"$LASTDIR\"";
       pls = "sudo $(fc -ln -1)";
-      vim = "emacsclient -nw $1";
       dota = "steam-run ~/.steam/steam/steamapps/common/dota\\ 2\\ beta/game/dota.sh"; # Keep using this until https://github.com/NixOS/nixpkgs/issues/128021 gets fixed
     };
     oh-my-zsh = {
