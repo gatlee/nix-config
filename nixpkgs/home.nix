@@ -36,7 +36,8 @@
   programs.zsh = {
     enable = true; 
     initExtra = "autoload -U promptinit; promptinit\n 
-                 prompt pure";
+                 prompt pure\n
+                 export PATH=\"$PATH:$HOME/.emacs.d/bin\"";
     shellAliases = {
       gits = "cd ~/Documents/sources";
       ran = "ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd \"$LASTDIR\"";
