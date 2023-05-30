@@ -6,8 +6,8 @@
 
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "gat";
-  home.homeDirectory = "/home/gat";
+  home.username = "gatlee";
+  home.homeDirectory = "/Users/gatlee";
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -26,18 +26,20 @@
   };
 
   programs.alacritty = {
-    enable = true;
+   enable = true;
   };
-  programs.emacs = {
-    enable = true;
-    extraPackages = epkgs: [ epkgs.vterm ];
-  };
-  services.emacs.enable = true;
+  #programs.emacs = {
+  #  enable = true;
+  #  extraPackages = epkgs: [ epkgs.vterm ];
+  #};
+  #services.emacs.enable = true;
   programs.zsh = {
     enable = true; 
     initExtra = "autoload -U promptinit; promptinit\n 
                  prompt pure\n
-                 export PATH=\"$PATH:$HOME/.emacs.d/bin\"";
+                 export PATH=\"$PATH:$HOME/.emacs.d/bin\"\n
+                 export PATH=\"$PATH:$HOME/.cargo/bin\"
+                 ";
     shellAliases = {
       gits = "cd ~/Documents/sources";
       ran = "ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd \"$LASTDIR\"";
@@ -68,13 +70,16 @@
     enable = true;
     userEmail = "gatlee.kaw@gmail.com";
     userName = "Gatlee Kaw";
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
   };
   programs.ssh.enable = true;
   programs.direnv.enable = true;
   programs.direnv.nix-direnv.enable = true;
 
   home.packages = with pkgs; [
-    gnomeExtensions.paperwm
+    #gnomeExtensions.paperwm
     pure-prompt
     ranger
     tldr
@@ -88,8 +93,20 @@
     clj-kondo
     clojure
     clojure-lsp
-    love
+    #love
     sumneko-lua-language-server
+    rustc
+    cargo
+    #rust-analyzer
+    rls
+    jdk11
+    heroku
+    iosevka-bin
+    neofetch
+    nodePackages.typescript-language-server
+    nodejs
+    yarn
+
   ];
   home.sessionPath = [ "~/.emacs.d/bin" "~HOME/usr/local/bin"];
   fonts.fontconfig.enable = true;
